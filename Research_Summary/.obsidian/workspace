@@ -1,0 +1,133 @@
+{
+  "main": {
+    "id": "8f1e0ccdddd3be23",
+    "type": "split",
+    "children": [
+      {
+        "id": "811698d08dd60e67",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "summaries/WildQA _In_the_Wild_Video_Question_Answering.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "f182b2306c23e4ca",
+    "type": "split",
+    "children": [
+      {
+        "id": "fe528f432d8c4f94",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "037fd06cd6046fcc",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "dcfea79084d92fc2",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "fd3c295e96f6f128",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "1f798bbe1fd5abb7",
+    "type": "split",
+    "children": [
+      {
+        "id": "c2af03656f690416",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "03119a3a5a5b9ec7",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "summaries/WildQA _In_the_Wild_Video_Question_Answering.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "841d968639b64bd8",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "summaries/WildQA _In_the_Wild_Video_Question_Answering.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "ed57e566f9789263",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "c1a3810228c2d037",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "summaries/WildQA _In_the_Wild_Video_Question_Answering.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "811698d08dd60e67",
+  "lastOpenFiles": []
+}
