@@ -11,3 +11,7 @@ Video understanding datasets currently available,
 * Tasks on WildQA - 1) Video QA and 2) Evidence Selection from videos ( for better interpretability )
 * Evaluation with few shot learning
 
+## Methods
+* [Text + Visual models](https://arxiv.org/pdf/2104.04182v3.pdf) -> Encoder-Decoder Architecture with Transformer model. They used I3D ( 3D ConvNets ) as video encoder and a Text2Text transformer for input queries.
+* [Multi Task Learning](https://ruder.io/multi-task/)
+
