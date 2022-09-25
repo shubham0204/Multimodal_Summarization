@@ -9,3 +9,10 @@
 - Started reading "Wild QA : Video Understanding" paper
 
 #### Chinmay
+
+- Started reading "Wild QA : Video Understanding" paper
+- Completed Kaggle Course on pandas for Data Science
+- Completed Kaggle Course on Seaborn for Data Visualisation
+- Started Kaggle Course on Machine Learning
+- Implemented various basic functions of conventional graph Data Structure
+- Studied about Hypergraphs
