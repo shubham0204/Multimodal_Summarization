@@ -1,5 +1,12 @@
 # Progress Log
 
+### Week 2 ( 26/09/2022 - 02/10/2022 )
+
+#### Shubham 
+- Read methodology of paper "Video QA with Prior Knowledge"
+
+#### Chinmay
+
 ### Week 1 ( 19/09/2022 - 25/09/2022 )
 
 #### Shubham

@@ -7,12 +7,8 @@
         "id": "811698d08dd60e67",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "summaries/WildQA _In_the_Wild_Video_Question_Answering.md",
-            "mode": "source",
-            "source": false
-          }
+          "type": "empty",
+          "state": {}
         }
       }
     ],
@@ -77,7 +73,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "summaries/WildQA _In_the_Wild_Video_Question_Answering.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +89,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "summaries/WildQA _In_the_Wild_Video_Question_Answering.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -116,9 +110,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "summaries/WildQA _In_the_Wild_Video_Question_Answering.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -128,6 +120,8 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "811698d08dd60e67",
-  "lastOpenFiles": []
+  "active": "037fd06cd6046fcc",
+  "lastOpenFiles": [
+    "summaries/WildQA _In_the_Wild_Video_Question_Answering.md"
+  ]
 }
