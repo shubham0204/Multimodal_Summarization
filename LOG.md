@@ -8,6 +8,9 @@
 - Tried PyTorch Geometric
 
 #### Chinmay
+- Read research paper titled "Knowledge-Based Video Question Answering with Unsupervised Scene Descriptions"
+- Read a medium article on Node Embeddings
+- Started reading documentation of TensoFlow GNN.
 
 ### Week 2 ( 26/09/2022 - 02/10/2022 )
 
@@ -15,6 +18,8 @@
 - Read methodology of paper "Video QA with Prior Knowledge"
 
 #### Chinmay
+- Integrated pretrained ML Model for Speech Recognition with Swift app.
+- Read research paper on Video QA using BERT
 
 ### Week 1 ( 19/09/2022 - 25/09/2022 )
 
