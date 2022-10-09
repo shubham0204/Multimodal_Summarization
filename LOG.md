@@ -1,5 +1,14 @@
 # Progress Log
 
+### Week 3 ( 03/10/2022 - 09/10/2022 )
+
+#### Shubham
+
+- Learnt basics of graph representation learning: Node Embeddings, Knowledge Graphs, Neural Message Passing
+- Tried PyTorch Geometric
+
+#### Chinmay
+
 ### Week 2 ( 26/09/2022 - 02/10/2022 )
 
 #### Shubham 
