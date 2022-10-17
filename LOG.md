@@ -1,5 +1,14 @@
 # Progress Log
 
+### Week 4 ( 10/10/2022 - 16/10/2022 )
+
+#### Shubham
+
+- Read more on extractive text summarization with graphs.
+- Tried sentence transformers and explored the CNN Daily Mail dataset
+
+#### Chinmay 
+
 ### Week 3 ( 03/10/2022 - 09/10/2022 )
 
 #### Shubham
