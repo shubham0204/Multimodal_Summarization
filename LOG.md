@@ -1,5 +1,14 @@
 # Progress Log
 
+### Week 6 ( 24/10/2022 - 30/10/2022 )
+
+- Read papers on extractive text summarization using graphs and how to model relationships in documents
+  with graph models.
+
+### Week 5 ( 17/10/2022 - 23/10/2022 )
+
+- Implemented text cleaning on CNN Daily Mail dataset
+
 ### Week 4 ( 10/10/2022 - 16/10/2022 )
 
 #### Shubham
