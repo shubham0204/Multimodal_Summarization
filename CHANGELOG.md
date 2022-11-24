@@ -1,4 +1,5 @@
-- Added `sent_bert.py` to produce sentence embeddings
-- Added `similarity_metrics.py` that contains various similarity metrics for embeddings
-- Added `build_graph.py` that builds a graph for a single document using the techniques 
-described in GUSUM
+- Added `rough-metric` in `requirements.txt`
+- Added `metrics.py` to calculate ROUGE scores
+- Improved pipeline in `run_gusum_impl.py`
+- Converted NumPy ops to `torch` ops in `similarity_metrics.py`
+- Changed return type of `model.encode` to `torch - Tensor` in `sent_bert.py`
