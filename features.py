@@ -13,7 +13,7 @@ def sentence_position( sentences ):
     N = len( sentences )
     for i in range( len( sentences ) ):
         if i == 0 or i == N - 1:
-            positions.append( 1 )
+            positions.append( 1.0 )
         else:
             positions.append( ( N - i ) / N )
     return positions

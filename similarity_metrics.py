@@ -12,3 +12,6 @@ def jaccard_score( vec1 , vec2 ):
     min_sum = torch.sum( torch.minimum( vec1 , vec2 ) )
     return min_sum / max_sum
 
+def cosine( vec1 , vec2 ):
+    return torch.dot( vec1 , vec2 ) / ( torch.norm( vec1 , p=2 ) * torch.norm( vec2 , p=2 ) )
+
