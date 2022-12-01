@@ -1,0 +1,21 @@
+from metrics import compute_rouge_1
+import pickle
+import numpy as np
+
+with open( '0_500_summaries.pkl' , 'rb' ) as file:
+    l1 = pickle.load( file )
+    
+with open( '500_1000_summaries.pkl' , 'rb' ) as file:
+    l2 = pickle.load( file )
+    
+data = np.array( l1 + l2 )
+pred = data[ : , 0 ]
+target = data[ : , 1 ]
+target = np.expand_dims( target , axis=1 )
+print( pred.shape , target.shape )
+
+for i in range( len( pred ) ):
+    pred[i] = '.'.join( pred[i] )
+
+score = compute_rouge_1( target.tolist() , pred.tolist() )
+print( score )

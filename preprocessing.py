@@ -60,15 +60,15 @@ def removePunctuation(article):
     article = re.sub(r'[^\w\s]', '', article)
     return article
 
-def processArticle(article):
+def process_article(article):
     article = article.lower()
     article = convertShortForms(article)
     article = convertAbbreviations(article)
     article = convertNumbers(article)
     article = convertDates(article)
     article = convertMoney(article)
-    article = removePunctuation(article)
-    article = removeStopWords(article)
-    article = stemWords(article)
-    article = lemmatizeWords(article)
+    # article = removePunctuation(article)
+    # article = removeStopWords(article)
+    # article = stemWords(article)
+    # article = lemmatizeWords(article)
     return article

@@ -1,5 +1,4 @@
-- Added `rough-metric` in `requirements.txt`
-- Added `metrics.py` to calculate ROUGE scores
-- Improved pipeline in `run_gusum_impl.py`
-- Converted NumPy ops to `torch` ops in `similarity_metrics.py`
-- Changed return type of `model.encode` to `torch - Tensor` in `sent_bert.py`
+- Added `nltk.tokenize.sent_tokenize` for sentence tokenization
+- Modified `process_article` in `preprocessing.py` to exclude punctuation removal
+- Modified `utils.py` to join sentences to form summary
+- Updated `requirements.txt`
