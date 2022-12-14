@@ -14,8 +14,6 @@ import torch
 import time
 import numpy as np
 import pickle
-import torch.multiprocessing as mp
-import pprint
 
 summaries = []
 target_summaries = []
@@ -37,7 +35,7 @@ def parse( doc ):
     embeddings = torch.stack( embeddings )
     
     edge_features = embeddings @ embeddings.transpose( 1 , 0 )
-    centrality = torch.reshape( node_features , ( num_sentences , )) * torch.sum( edge_features , dim=1 )
+    centrality = node_features.resize( num_sentences , ) * torch.sum( edge_features , dim=1 )
     centrality = centrality.cpu().detach().numpy()
     summary = get_summary( sentences , centrality , k=3 )
     return ( summary , target_summary )
@@ -50,14 +48,10 @@ if __name__ == '__main__':
     print( 'Num samples: ' , len(dataset) )
     import time
     t1 = time.time()
+    results = []
     indices = [ dataset[i] for i in range( 25 ) ]
-    pool = mp.get_context( 'spawn' ).Pool( mp.cpu_count() )
-    results = pool.map_async( parse , indices ).get()
-    pool.close()
-    pool.join()
-    print( results[0][0] )
-    print( '--------' )
-    print( results[0][1] )
+    for i in indices:
+        results.append( parse( i ) )
     print( time.time() - t1 )
 
 """

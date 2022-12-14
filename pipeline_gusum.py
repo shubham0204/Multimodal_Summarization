@@ -5,7 +5,7 @@ from torch.utils.data import DataLoader
 from pytorch_feature_extractor import CNNFeatureExtractor
 
 def main():
-    loader = DataLoader( dataset=CNNFeatureExtractor() , num_workers=4  )
+    loader = DataLoader( dataset=CNNFeatureExtractor() , num_workers=0  )
     t1 = time.time()
     num = 0
     for sample in loader:

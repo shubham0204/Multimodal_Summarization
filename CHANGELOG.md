@@ -1,4 +1,4 @@
-- Added `nltk.tokenize.sent_tokenize` for sentence tokenization
-- Modified `process_article` in `preprocessing.py` to exclude punctuation removal
-- Modified `utils.py` to join sentences to form summary
-- Updated `requirements.txt`
+- Updated sentence transformer model to `roberta-base-nli-stsb-mean-tokens`
+- Added multiprocessing code in `run_gusum_impl`
+- Improved pipeline performance in `run_gusum_impl`
+- Added `gusum_fused` feature that computes all features in one-iteration

@@ -7,6 +7,8 @@ from features import sentence_num_proper_nouns
 from features import sentence_num_numeric_terms
 from sent_bert import get_sent_embedding
 from similarity_metrics import cosine
+from nltk import sent_tokenize
+from preprocessing import process_article
 import torch
 
 class CNNFeatureExtractor( Dataset ):
@@ -24,10 +26,7 @@ class CNNFeatureExtractor( Dataset ):
     def __getitem__(self, item):
         article = self.dataset[ item ]['article']
         target_summary = self.dataset[ item ]['highlights']
-        sentences = article.split(".")
-        sentences = [sent for sent in sentences if len(sent.split()) != 0]
-        num_sentences = len(sentences)
-        # TODO: Add preprocessing code
+        sentences = sent_tokenize( process_article( article ) )
         f1 = sentence_length(sentences)
         f2 = sentence_position(sentences)
         f3 = sentence_num_proper_nouns(sentences)
