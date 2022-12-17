@@ -10,6 +10,7 @@ from preprocessing import process_article
 from utils import get_summary
 from metrics import compute_rouge_1
 from nltk import sent_tokenize
+from torch.utils.data import DataLoader
 import torch
 import time
 import numpy as np
@@ -41,17 +42,15 @@ def parse( doc ):
     centrality = centrality.cpu().detach().numpy()
     summary = get_summary( sentences , centrality , k=3 )
     return ( summary , target_summary )
-    # print( f'Processed {N+1} sentence(s)' , 'Time taken: ', time.time() - t1 )
-
     
 if __name__ == '__main__':
     global dataset
-    dataset = load_dataset( "cnn_dailymail" , "3.0.0" , split='train' , ).with_format( type='torch' )
-    print( 'Num samples: ' , len(dataset) )
+    dataset = load_dataset( "cnn_dailymail" , "3.0.0" , split='test' ).with_format( type='torch' )
+    # print( 'Num samples: ' , len(dataset) )
     import time
     t1 = time.time()
-    indices = [ dataset[i] for i in range( 25 ) ]
-    pool = mp.get_context( 'spawn' ).Pool( mp.cpu_count() )
+    indices = [ dataset[i] for i in range( 100 ) ]
+    pool = mp.get_context( 'spawn' ).Pool( mp.cpu_count() - 1 )
     results = pool.map_async( parse , indices ).get()
     pool.close()
     pool.join()
