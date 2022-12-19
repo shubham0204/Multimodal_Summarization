@@ -23,7 +23,6 @@ packaging==21.3
 pandas==1.5.2
 Pillow==9.3.0
 pyarrow==10.0.1
-pyg-lib==0.1.0+pt113cpu
 pyparsing==3.0.9
 python-dateutil==2.8.2
 pytz==2022.6
@@ -39,7 +38,6 @@ sentencepiece==0.1.97
 six==1.16.0
 threadpoolctl==3.1.0
 tokenizers==0.13.2
-torch==1.13.0+cpu
 torch-cluster==1.6.0+pt113cpu
 torch-geometric==2.1.0.post1
 torch-scatter==2.1.0+pt113cpu

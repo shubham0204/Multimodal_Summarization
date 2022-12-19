@@ -40,13 +40,13 @@ if __name__ == '__main__':
 
     results = []
     samples = [ dataset[i] for i in range( len( dataset ) ) ]
-    i = 4000
-    for sample in samples[i:i+2000]:
+    i = 8000
+    for sample in samples[i:]:
         print( 'Processed' , i + 1 , 'sentences' )
         results.append( parse( sample ) )
         i += 1
 
-    with open( '4000_6000_summaries.pkl' , 'wb' ) as file:
+    with open( '8000_11400_summaries.pkl' , 'wb' ) as file:
         pickle.dump( results , file )
 
 
