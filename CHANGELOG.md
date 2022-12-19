@@ -1,4 +1,2 @@
-- Updated sentence transformer model to `roberta-base-nli-stsb-mean-tokens`
-- Added multiprocessing code in `run_gusum_impl`
-- Improved pipeline performance in `run_gusum_impl`
-- Added `gusum_fused` feature that computes all features in one-iteration
+- Updated `sequential.py` for `Trial 2`
+- Added `trail_1_summaries.zip`
