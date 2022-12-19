@@ -24,14 +24,19 @@ def parse( doc ):
     node_features = scores.transpose( 1 , 0 )
 
     embeddings = []
-    for sentence in sentences:
-        embeddings.append( get_sent_embedding( sentence ) )
+    norms = []
+    for i in range( num_sentences ):
+        embeddings.append( get_sent_embedding( sentences[i] ) )
+        norms.append( torch.norm( embeddings[i] , p=2 ) )
     embeddings = torch.stack( embeddings )
+    norms = torch.tensor( norms )
+    norms = torch.reshape( norms , [ norms.shape[0] , 1 ] )
     
     edge_features = embeddings @ embeddings.transpose( 1 , 0 )
+    edge_features = edge_features / ( norms @ torch.transpose( norms , 1 , 0 ) )
     centrality = torch.reshape( node_features , ( num_sentences , ) ) * torch.sum( edge_features , dim=1 )
     summary = get_summary( sentences , centrality , k=3 )
-    return ( summary , target_summary )
+    return summary , target_summary
 
 if __name__ == '__main__':
     
@@ -40,13 +45,14 @@ if __name__ == '__main__':
 
     results = []
     samples = [ dataset[i] for i in range( len( dataset ) ) ]
-    i = 8000
+    i = 10000
+    num = 1000
     for sample in samples[i:]:
         print( 'Processed' , i + 1 , 'sentences' )
         results.append( parse( sample ) )
         i += 1
 
-    with open( '8000_11400_summaries.pkl' , 'wb' ) as file:
+    with open( f'trial_02_summaries/10000_11490_summaries.pkl' , 'wb' ) as file:
         pickle.dump( results , file )
 
 
