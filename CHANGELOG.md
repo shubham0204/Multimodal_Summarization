@@ -1,4 +1,1 @@
-- Created `trial_03.py` for testing Jaccard coefficient as the similarity metric
-- Added `test_keyword_extraction.py` to test keyword extraction feature
-- Added `compute_scores.py` to determine ROUGE scores from `summaries`
-- Added results for `trial_03`
+- Added `trial_04_keyword.py` for testing keyword proportion feature

@@ -5,6 +5,7 @@ def gusum_fused( sentences ):
     positions = []
     rate_pos_terms_NNP = []
     rate_pos_terms_CD = []
+    
     N = len( sentences )
     for i in range( N ):
         words = sentences[i].split()
@@ -24,6 +25,8 @@ def gusum_fused( sentences ):
     relative_lengths = [ ( ni / max_num_words ) for ni in num_words ]
     return relative_lengths , positions , rate_pos_terms_NNP , rate_pos_terms_CD
     
+def keyword_weight():
+    pass
 
 def sentence_length( sentences ):
     num_words = []
@@ -57,3 +60,4 @@ def __sentence_num_pos_tags(sentences, tag):
         num_terms = sum([1 for x in pos if x[1] == tag])
         rate_pos_terms.append( num_terms / len( words ))
     return rate_pos_terms
+

@@ -43,7 +43,7 @@ if __name__ == '__main__':
     samples = [ dataset[i] for i in range( len( dataset ) ) ]
     i = 10000
     num = 1000
-    for sample in samples[i:]:
+    for sample in samples[i:i+num]:
         print( 'Processed' , i + 1 , 'sentences' )
         results.append( parse( sample ) )
         i += 1
