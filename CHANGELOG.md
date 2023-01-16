@@ -1,1 +1,2 @@
-- Added `trial_04_keyword.py` for testing keyword proportion feature
+- Added GPU support to `trial_05_coref.py`
+- Removed methods from `metrics.py`
