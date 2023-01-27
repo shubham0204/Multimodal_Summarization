@@ -1,14 +1,10 @@
 from datasets import load_dataset
 from features import gusum_fused
 from sent_bert import get_sent_embedding
-from similarity_metrics import cosine
 from preprocessing import process_article
 from utils import get_summary
-from metrics import compute_rouge_1
 from nltk import sent_tokenize
 import torch
-import time
-import numpy as np
 import pickle
 
 summaries = []

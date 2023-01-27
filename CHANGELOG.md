@@ -1,2 +1,3 @@
-- Added GPU support to `trial_05_coref.py`
-- Removed methods from `metrics.py`
+- Added `trial_05B_wikihow.py` to test on WikiHow dataset
+- Added `test_wikihow_dataset.py` to produce cleaned and truncated version of WikiHow dataset
+- Added `wikihow_data/cleaned_10000.csv` a cleaned version of 10K samples from original dataset.

@@ -2,4 +2,5 @@
 venv
 __pycache__
 .vscode
-
+wikihow_data/wikihow-summarization.zip
+wikihow_data/wikihowAll.csv
