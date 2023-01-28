@@ -1,3 +1,3 @@
-- Added `gather_features_wikihow_gusum.py` to collect values of GUSUM features for analysis of WikiHow
-dataset.
-- Added `feature_analysis/gusum_wikihow`
+- `resolve_coref.py` to resolve coreferences of articles from CNN DailyMail dataset.
+- `build_neural_coref` to build HuggingFace's NeuralCoref package from source.
+- `coref_resolved/cnn_dailymail` contains coreference-resolved articles (processed) from CNN DailyMail

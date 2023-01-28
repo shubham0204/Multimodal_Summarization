@@ -4,22 +4,16 @@ from sent_bert import get_sent_embedding
 from preprocessing import process_article
 from utils import get_summary
 from nltk import sent_tokenize
-from allennlp.predictors.predictor import Predictor
 import torch
 import pickle
 
 device = torch.device( 'cuda' if torch.cuda.is_available() else 'cpu' )
 
-model_url = "https://storage.googleapis.com/allennlp-public-models/coref-spanbert-large-2020.02.27.tar.gz"
-predictor = Predictor.from_path(model_url)
 
 def parse( doc ):
-    article = doc[ 'article' ][0]
-    print( type( article) )
-    article = predictor.coref_resolved( str(article) )
-    target_summary = doc[ 'highlights' ][0]
-    print( type( target_summary ) )
-    sentences = sent_tokenize( process_article( article ) )
+    article = doc[0]
+    target_summary = doc[1]
+    sentences = sent_tokenize( article )
     num_sentences = len( sentences )
     
     scores = torch.mean( torch.tensor( gusum_fused( sentences ) ) , dim=0 , keepdim=True ).to( device )
