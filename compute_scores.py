@@ -4,7 +4,7 @@ import os
 import pprint
 import pickle
 
-summaries_dir = 'summaries/hello'
+summaries_dir = 'summaries/trial_05B_summaries'
 names = os.listdir( summaries_dir )
 summaries = []
 for name in names:
