@@ -4,11 +4,12 @@ from sent_bert import get_sent_embedding
 from preprocessing import process_article
 from utils import get_summary
 from nltk import sent_tokenize
+import numpy as np
 import torch
+import os
 import pickle
 
 device = torch.device( 'cuda' if torch.cuda.is_available() else 'cpu' )
-
 
 def parse( doc ):
     article = doc[0]
@@ -37,22 +38,27 @@ def parse( doc ):
 
 if __name__ == '__main__':
     
-    dataset = load_dataset( "cnn_dailymail" , "3.0.0" , split='test' ).with_format( type='torch' )
-    loader = torch.utils.data.DataLoader( dataset )
-    print( 'Num samples: ' , len(dataset) )
+    articles_dir = 'coref_resolved/cnn_dailymail'
+    names = os.listdir( articles_dir )
+    articles = []
+    for name in names:
+      file = open( os.path.join( articles_dir , name ) , 'rb' )
+      result = pickle.load( file )
+      for i in range( len( result ) ):
+        articles.append( result[i] )
+      file.close()
 
     results = []
     i = 0
-    for sample in loader:
+    for sample in articles:
         print( 'Processed' , i + 1 , 'sentences' )
         results.append( parse( sample ) )
         i += 1
-        if i % 1000 == 0:
-          with open( 'Multimodal_Summarization/summaries/trial_05_summaries/{}_summaries.pkl'.format(i) , 'wb' ) as file:
+        if i % 1000 == 0 or i == len( articles ):
+          with open( 'summaries/trial_05A_summaries/{}_summaries.pkl'.format(i) , 'wb' ) as file:
             pickle.dump( results , file )
           print( 'Saved' )
           results = []
-        
         
 
 
