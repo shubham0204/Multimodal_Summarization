@@ -1,6 +1,6 @@
-#from rouge_metric import PyRouge
-import rouge
+import evaluate
+
+rouge = evaluate.load('rouge')
 
 def evaluate(target_summaries, predicted_summaries):
-    evaluator = rouge.Rouge()
-    return evaluator.get_scores( predicted_summaries , target_summaries , avg=True )
+  return rouge.compute( predictions=predicted_summaries, references=target_summaries)

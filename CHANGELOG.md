@@ -1,3 +1,1 @@
-- `resolve_coref.py` to resolve coreferences of articles from CNN DailyMail dataset.
-- `build_neural_coref` to build HuggingFace's NeuralCoref package from source.
-- `coref_resolved/cnn_dailymail` contains coreference-resolved articles (processed) from CNN DailyMail
+- `metrics.py` now uses HuggingFace's `evaluate` for ROUGE score.
